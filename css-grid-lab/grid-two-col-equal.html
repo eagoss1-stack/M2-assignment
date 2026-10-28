@@ -7,17 +7,18 @@
   <title>CSS Grid Demo</title>
   <style>
     /*  ---------------Box Sizing-----------------  */
-    html {
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+     html {
+      box-sizing: border-box;
+    }
 
-/* Starter */
-main > * {
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    /* Starter */
+    main > * {
   font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
     sans-serif;
   font-weight: normal;
@@ -31,6 +32,39 @@ main {
   gap: 20px;
   max-width: 80vw;
   margin: 20px auto;
+}
+
+/* Solution */
+
+main{
+  grid-template-columns: 1fr 1fr;
+}
+header.primary{
+  grid-column-start:1;
+  grid-column-end:3;
+}
+
+  #content{
+  grid-column-start: 1;
+  grid-column-end:2;
+  grid-row-start:2;
+  grid-row-end: 3;
+  }
+  aside{
+ grid-column-start:1;
+  grid-column-end:3;
+  grid-row-start:3;
+  grid-row-end:4;
+  }
+  #blog{
+ grid-column-start:2;
+  grid-column-end:3;
+  grid-row-start: 2;
+  grid-row-end:3;
+  }
+  footer{
+  grid-column-start:1;
+  grid-column-end:3;
 }
 </style>
 </head>
